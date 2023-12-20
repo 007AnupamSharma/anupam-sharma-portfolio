@@ -33,7 +33,7 @@ loco()
 
 gsap.from("#icon-floating-div-up i",{
     y:100,
-    duration:7,
+    duration:15,
     repeat:-1,
     yoyo:true,
 
@@ -45,6 +45,32 @@ gsap.from("#icon-floating-div-down i",{
     delay:2,
     repeat:-1,
     yoyo:true,
-
-
 })
+
+
+Shery.mouseFollower();
+Shery.textAnimate("#name p", {
+  //Parameters are optional.
+  style: 1,
+  y: 10,
+  delay: 0.1,
+  duration: 2,
+  ease: "cubic-bezier(0.23, 1, 0.320, 1)",
+  multiplier: 0.1,
+});
+
+Shery.hoverWithMediaCircle("#name h2", {
+  images: ["./images/anupam.jpg"] ,
+});
+
+
+
+
+
+
+
+
+
+
+
+

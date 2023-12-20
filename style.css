@@ -21,13 +21,22 @@ html, body{
     width: 100%;
     background-color: rgb(11, 14, 30);
     position: relative;
-
+    
     /* overflow-y: hidden; */
 }
+#page1 video{
+    position: absolute;
+    width: 100vw;
+    /* height: 100vh; */
+    z-index: -100;
+}
+
+
 #icon-div{
     width: 100%;
     height: 100%;
     position: absolute;
+    z-index: 2;
 }
 #icon-floating-div-up{
     width: 100%;
@@ -72,13 +81,61 @@ html, body{
     width: 100%;
     height: 100vh;
 }
+
 #page2{
-    height: 70vh;
-    width: 100%;
-    transform: rotate(3deg);
-    background-color: rgb(100, 112, 181);
     position: relative;
+    height: 140vh;
+    z-index: -1;
+    margin-top: 300px;
 }
+#page2 #box{
+    height: 120vh;
+    width: 120vw;
+    transform: rotate(3deg);
+    background: rgb(2,0,36);
+background: linear-gradient(142deg, rgba(2,0,36,1) 0%, rgba(3,3,43,1) 17%, rgba(7,7,99,1) 30%, rgba(9,9,121,1) 42%, rgba(6,81,168,1) 54%, rgba(1,188,239,1) 75%, rgba(0,212,255,1) 98%);
+    position: absolute;
+    z-index: 5;
+    
+}
+
+#page2 #box::before{
+    content: "";
+    width: 100%;
+    height: 120vh;
+    position: absolute;
+    background: rgb(2,0,36);
+background: linear-gradient(142deg, rgba(2,0,36,1) 0%, rgba(3,3,43,1) 17%, rgba(7,7,99,1) 30%, rgba(9,9,121,1) 42%, rgba(6,81,168,1) 54%, rgba(1,188,239,1) 75%, rgba(0,212,255,1) 98%);
+    transform: translateX(-50px);
+    z-index: -1;
+}
+
+#page3{
+    position: relative;
+    height: 150vh;
+}
+
+#page3 #box{
+    height: 56vh;
+    width: 120vw;
+    transform: rotate(-3deg);
+    background:#67696E;
+    position: absolute;
+    z-index: 5;
+    
+}
+
+#page3 #box::before{
+    content: "";
+    width: 100%;
+    height: 56vh;
+    position: absolute;
+    background: #67696E;
+    transform: translateX(-50px);
+    z-index: -1;
+}
+
+
 
 
 
@@ -261,3 +318,150 @@ html, body{
     color: aqua;
     font-size: 20rem;
 }
+
+
+/* page 2 */
+
+#projects{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    /* background-color: rebeccapurple; */
+    z-index: 10;
+    padding: 30px;
+}
+
+#projects h1{
+    color: white;
+    font-size: 7vh;
+    margin-bottom: 60px;
+}
+#cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 55px;
+    padding: 5px;
+}
+#cards #card{
+    height: 300px;
+    width: 550px;
+    /* background-color: red; */
+    border-radius: 10px;
+    transition: all 1s ease-in;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    padding: 30px;
+    box-shadow: 5px 10px 20px #888888;
+    gap: 45px;
+}
+
+#cards #card:hover{
+    transform: translateY(-10px);
+}
+
+
+#card p{
+    color: white;
+    font-size: 3vh;
+    font-weight: 100;
+}
+
+#card h3{
+    color: #fff;
+    font-size: 7vh;
+    font-weight: 700;
+}
+
+
+#cards a{
+    text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
+/* wave  */
+#footer{
+
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    /* background-color: red; */
+}
+  
+#details{
+    width: 100%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    padding: 0px 90px;
+}
+#details h2{
+    color: #fff;
+    font-size: 7vw;
+    letter-spacing: -.4vw;
+}
+
+#details #connect-icon{
+    color: red;
+    font-size: 5vw;
+    letter-spacing: -.4vw;
+}
+
+
+#bottomDetails{
+    width: 100%;
+    height: 30%;
+    background-color: red;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+
+.ocean {
+    height: 0%;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: #989898;
+    opacity: 0.5;
+}
+
+.wave {
+    background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/756881/wavePurple.svg) repeat-x;
+    position: absolute;
+    bottom: -10px;
+    width: 6400px;
+    height: 198px;
+    animation: wave 12s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite, swell 8s ease -1.25s infinite;;
+    transform: translate3d(0, 0, 0);
+    
+}
+  
+  
+  
+@keyframes wave {
+    0% {
+        margin-left: 0;
+    }
+    100% {
+        margin-left: -1600px;
+    }
+}
+
+
+
